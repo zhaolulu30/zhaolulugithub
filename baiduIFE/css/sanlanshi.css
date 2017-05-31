@@ -1,0 +1,61 @@
+#wrap{
+	width: 1200px;
+	height: auto;
+	background: #eee;
+	position: relative;
+	margin: 20px auto;
+	border: 1px solid #808080;
+	padding: 20px;
+}
+#wrap div{
+	display: inline-block;
+	background: #fff;
+}
+#left{
+	width: 200px;
+	height: 100px;
+	vertical-align: top;
+	margin-right: 14px;
+	background:url(img/三栏式/danping4_14.jpg) no-repeat;
+}
+#left span{
+	color: #000;
+	position: relative;
+	left: 10px;
+	top: -60px;
+}
+#left a{
+	text-decoration: none;
+}
+#left img{
+	margin: 10px;
+}
+#content{
+	width: 780px;
+	margin: 0 auto;
+	padding: 20px;
+}
+#content p{
+	font-size: 14px;
+	line-height: 20px;
+}
+#right{
+	width: 140px;
+	float: right;
+}
+#right .list{
+	padding: 0px 20px 20px 20px;
+}
+		
+#right ul li{
+	list-style: none;
+	width: 100px;height: 100px;
+	margin-top: 20px;
+}
+.clear:after{
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
