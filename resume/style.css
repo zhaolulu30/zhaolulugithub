@@ -1,0 +1,214 @@
+/*css reset*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,ol{
+    list-style: none;
+}
+
+img{
+    max-width: 100%；
+}
+
+section.summary{
+        height: 100vh;
+       
+        background: url(img/02.jpg) no-repeat;
+        
+       
+}
+
+section.summary .wrap{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+     height: 100vh;
+     background: rgba(256, 256, 256, 0.5);
+
+}
+section.summary img.avatar{
+    width: 128px;
+    border-radius: 50%;
+
+}
+
+section.summary .text{
+    line-height: 1.5;
+    text-align: center;
+}
+
+section.works{
+    height: 100vh;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background: rgb(244, 244, 244);
+}
+@media (max-width:500px){
+    section.works{
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+section.works img{
+    max-width: 200px;
+    
+}
+
+section.works .images{
+    padding: 10px;
+    background: #fff;
+}
+section.works>ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+}
+@media (max-width:500px){
+    section.works{
+        padding: 1em;
+    }
+    section.works > ul{
+        justify-content: center;
+    }
+}
+section.works>ul h3{
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 8px 0;
+}
+section.works>h2{
+    font-size: 36px;
+    margin-bottom: 1em;
+}
+
+section.skills{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+section.skills img{
+    max-width: 40px;
+    
+}
+section.skills .imageswrap{
+    padding: 10px;
+}
+
+section.skills h3{
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 10px;
+    margin: 8px 0;
+}
+
+section.skills ol:first-child{
+    display: flex;
+    border: 1px solid #BBB3AE;
+    border-bottom: none;
+}
+
+section.skills ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 700px;
+}
+
+section.skills ol:first-child>li.active{
+    background: linear-gradient(to bottom, white 0%,#f3f3f3 100%);
+    color:#222;
+
+}
+
+section.skills ol:first-child>li{
+    flex-grow: 1;
+    padding: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px white;
+    cursor: pointer;
+}
+
+section.skills ol:nth-child(2){
+     border: 1px solid #B8B3AE;
+    border-top: none;
+    background: #f3f3f3;
+}
+
+section.skills ol:nth-child(2)>li{
+    min-height: 5em;
+    display: none;
+    cursor: pointer;
+}
+section.skills ol:nth-child(2)>li.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con{
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #333;
+    margin: 5em 0;
+}
+
+
+
+
+
+
+section.contacts{
+    height: 100vh;
+}
+
+section.contacts{
+        height: 100vh;
+       
+        background: url(img/bg.jpg) no-repeat center;
+        
+       
+}
+
+section.contacts .wrap{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+     height: 100vh;
+     background: rgba(256, 256, 256, 0.5);
+     line-height: 2;
+     
+}
+section.contacts  .wrap > dl{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20em;
+}
+section.contacts  .wrap > dl > dt{
+    width: 5em;
+}
+section.contacts  .wrap > dl > dd{
+    width: 15em;
+}
+
+.wc{
+    background: url(img/wexin.png) no-repeat center;
+}
+.iphone{
+    background: url(img/iphone.png) no-repeat center;
+}
+.email{
+    background: url(img/email.png) no-repeat center;
+}
