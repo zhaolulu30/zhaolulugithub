@@ -46,10 +46,9 @@ a{
     margin: 0;
     padding: 0; 
     position: fixed;
-    right: 10px; top: 10px;
+    right: 2px; top: 10px;
     list-style-type: none;
     z-index: 70;
-
 }
 #ext > li{
     display: inline-block;
