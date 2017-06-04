@@ -7,6 +7,9 @@ ul,ol{
 img{
     max-width: 100%；
 }
+a{
+    text-decoration: none;
+}
 
 /*menu*/
 #menu {
@@ -25,11 +28,12 @@ img{
 #menu a { 
     float: left;
     padding: 10px 20px;
-    background: #fff;
+    background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#bebebe));
     color: #333;
     text-decoration: none;
     border-radius: 10px;
-     -webkit-border-radious:10px; 
+    -webkit-border-radious:10px; 
+    -moz-border-radious:10px;
 }
 #menu .active a { 
     color: #fff; 
@@ -38,15 +42,26 @@ img{
     -webkit-border-radious:10px; 
     background: rgba(0,0,0, 0.5);
 }
+#ext{
+    margin: 0;
+    padding: 0; 
+    position: fixed;
+    right: 10px; top: 10px;
+    list-style-type: none;
+    z-index: 70;
 
-
+}
+#ext > li{
+    display: inline-block;
+    margin:  0 10px 0 0; 
+}
+#ext img{
+    max-width: 48px;
+}
 
 section.summary{
         height: 100vh;
-       
         background: url(img/02.jpg) no-repeat;
-        
-       
 }
 section.summary .wrap{
      display: flex;
@@ -59,11 +74,13 @@ section.summary .wrap{
 
 }
 section.summary img.avatar{
-    width: 128px;
+    width: 168px;
     border-radius: 50%;
 
 }
-
+section.summary a{
+    color: #333;
+}
 section.summary .text{
     line-height: 1.5;
     text-align: center;
@@ -229,7 +246,7 @@ section.contacts .wrap{
      flex-direction: column;
      width: 100%;
      height: 100vh;
-     background: rgba(256, 256, 256, 0.5);
+     background: rgba(256, 256, 256, 0.4);
      line-height: 2;
      
 }
