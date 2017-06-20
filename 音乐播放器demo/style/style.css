@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 320px;
+    height: 600px;
+    background: #000;
+    font-family:Arial;
+    font-weight: bold;
+    margin: 50px auto;
+}
+
+#container .top{
+    width: 320px;
+    height: 23px;
+    background: url(../images/1.png);
+}
+#container .title{
+    width: 320px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    background: url(../images/2.png);
+}
+
+#container .singer{
+    width: 320px;
+    height: 30px;
+    color: #ccc;
+    text-align: center;
+    line-height: 30px;
+}
+.play{
+    width: 190px;
+    height: 190px;
+    margin: auto;
+    background: url(../images/3.png);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.lrc{
+    padding-top: 20px;
+    width: 300px;
+    height: 260px;
+    margin: auto;
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial;
+    overflow: hidden;
+    line-height: 1.5;
+    
+}
+.content{
+    position: relative;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.content p{
+    line-height: 20px;
+}
+
+.rotate{
+   animation: rot 10s linear infinite; /* 自定义动画：动画名称 时间 匀速 无限重复*/
+}
+/*设置动画每一帧*/
+@keyframes rot{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+
+}
+
+.active{
+    color: red;
+    font-size: 16px;
+}
