@@ -162,7 +162,7 @@ function renderLyric(){
     // });
 function getChannel(){
 	$.ajax({
-		url: 'http://api.jirengu.com/fm/getChannels.php',
+		url: 'https://jirenguapi.applinzi.com/fm/getChannels.php',
 		dataType: 'json',
 		Method: 'get',
 		success: function(response){
@@ -180,7 +180,7 @@ function getChannel(){
 // 通过ajax获取歌曲
 function getmusic(){
 	$.ajax({
-		url: 'http://api.jirengu.com/fm/getSong.php',
+		url: 'https://jirenguapi.applinzi.com/fm/getSong.php',
 		dataType: 'json',
 		Method: 'get',
 		data:{
@@ -226,7 +226,7 @@ var lyricArr=[];
 function getlyric(){
 	var Sid = $('audio').attr('sid');
 	var Ssid = $('audio').attr('ssid');
-	$.post('http://api.jirengu.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
+	$.post('https://jirenguapi.applinzi.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
         .done(function (lyr){
         	// console.log(lyr);
         	var lyr = JSON.parse(lyr);;
