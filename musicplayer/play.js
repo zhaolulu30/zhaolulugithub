@@ -26,10 +26,19 @@ $( document ).ready(function() {
         if(off){
             $(".solo").css("display","inline-block");
 			$(".loop").css("display","none");
+			$('audio').attr('loop','loop');
          	off=false;
         }
     });
-
+ $(".solo").click(function(){
+		// 列表循环
+		if(!off){
+			$(".loop").css("display","inline-block");
+			$(".solo").css("display","none");
+			$('audio').removeAttr('loop','no-loop');
+			off=true;
+		}
+	});
 	// 切换收藏按钮
 	var like=true;
 	$(".unlike").click(function(){
@@ -49,14 +58,7 @@ $( document ).ready(function() {
 	
 
 
-	$(".solo").click(function(){
-		// 列表循环
-		if(!off){
-			$(".loop").css("display","inline-block");
-			$(".solo").css("display","none");
-			off=true;
-		}
-	});
+	
 
 //播放状态
 	function play(){
@@ -114,6 +116,7 @@ $(".music-lyric").click(function(){
    // console.log(txt);
 function renderLyric(){
 	var lyrLi = "";
+	//动态添加歌词的li
     for (var i = 0; i < lyricArr.length; i++) {
         lyrLi += "<li data-time='"+lyricArr[i][0]+"'>"+lyricArr[i][1]+"</li>";
     }
@@ -226,7 +229,7 @@ var lyricArr=[];
 function getlyric(){
 	var Sid = $('audio').attr('sid');
 	var Ssid = $('audio').attr('ssid');
-	$.post('https://jirenguapi.applinzi.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
+	$.get('https://jirenguapi.applinzi.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
         .done(function (lyr){
         	// console.log(lyr);
         	var lyr = JSON.parse(lyr);;
@@ -325,11 +328,8 @@ $("#process-bar").click(function(ev){  //拖拽进度条控制进度
 var curBtn=$("#cur-btn");
 var processCur=$("#process-cur");
     function curMoveByCurtime(nowtime,alltime){
-		// 自动下一曲
-        if (nowtime==alltime&&$(".solo")) {
-			play();
-        }else if(nowtime==alltime){
-			 getmusic();
+		if(nowtime===alltime){
+			getmusic();
 		}
     	processCur.css("width",(nowtime/alltime)*235 +'px');
     	curBtn.css("left",(nowtime/alltime)*235 +'px');//进度点的位置根据歌曲的时间运动
