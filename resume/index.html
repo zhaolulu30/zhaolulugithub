@@ -26,27 +26,36 @@
         <li data-menuanchor="page3" class=""><a href="#page3">我的技能</a></li>
         <li data-menuanchor="page4" class="active"><a href="#page4">联系我</a></li>
     </ul>
-    <ul id="ext">
-        <li>
-            <a href="https://github.com/zhaolulu30" target="_blank">
-                <img src="img/github.png" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="http://www.cnblogs.com/feilu2016/" target="_blank">
-                <img src="img/blog.png" alt>
-            </a>
-        </li>
-    </ul>
     <div id="fullpage">
-        <section class="summary section fp-section fp-table" data-anchor="page1">
-            <div class="wrap">
-                <img class="avatar" src="img/WechatIMG3.jpeg" alt/>
-                <div class="text">
-                    <h1>赵露露</h1>	
-                    <p>前端工程师</p>
-                    <p><a href="mailto:zhaolulu0217@gmail.com">zhaolulu0217@gmail.com</a></p>
-                    <p><a href="#">一腔热血的激情 · 一夜失眠的创意 · 一个像素的执着</a></p>
+        <section id="main"  class="summary section fp-section fp-table" data-anchor="page1">
+            <div  class="wrap">
+                 <span style="width:36%;height:100vh;background:#222;display:inline-block;position:absolute;left:0;"></span>
+                 <img src="img/lulu1.png" alt="" id="bg-img">
+                 <div id="mySidenav" class="sidenav">
+                    <a href="#" class="close" id="close">&times;</a>
+
+                    <a href="#">兴趣、爱好....</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#">Contack</a>
+                </div>
+                 <div class="container">
+                    <span id="open" style="font-size:30px;cursor:pointer">&#9776;click me</span>
+                    <h1>赵露露</h1>
+                        <p class="title">前端工程师</p>
+                        <p>哈尔滨商业大学</p>
+                        <p>一腔热血的激情 . 一夜失眠的创意 . 一个像素的执着</p>
+                        <div style="margin: 24px 0;">
+                             <a href="https://github.com/zhaolulu30" target="_blank">
+                                  <img src="img/github.png" alt="">
+                             </a>
+                             <a href="http://www.cnblogs.com/feilu2016/" target="_blank">
+                                  <img src="img/blog.png" alt>
+                             </a> 
+                        </div>
+                        <a href="mailto:zhaolulu0217@gmail.com">
+                        zhaolulu0217@gmail.com
+                        </a>
                 </div>
             </div>
         </section>
@@ -58,9 +67,12 @@
                         <a href="">
                             <img src="img/demo.png" alt>
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
-                        作品描述
+                        原生js组件
                     </h3>
                 </li>
                 <li>
@@ -68,9 +80,12 @@
                         <a href="">
                             <img src="img/03.jpg" alt="">
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
-                        作品描述
+                        jQuery+json音乐播放器
                     </h3>
                 </li>
                 <li>
@@ -78,9 +93,12 @@
                         <a href="">
                             <img src="img/01.png" alt>
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
-                        作品描述
+                        静态页面
                     </h3>
                 </li>
                 <li>
@@ -88,6 +106,9 @@
                         <a href="">
                             <img src="img/pc.jpg" alt="">
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
                         作品描述
@@ -98,6 +119,9 @@
                         <a href="">
                             <img src="img/04.png" alt="">
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
                         作品描述
@@ -108,6 +132,9 @@
                         <a href="">
                             <img src="img/08.jpg" alt="">
                         </a>
+                        <div class="overlay1">
+                        <div class="text text1">hello word</div>
+                    </div>
                     </div>
                     <h3>
                         作品描述
@@ -116,28 +143,29 @@
             </ul>
         </section>
         <section class="skills section fp-section fp-table" data-anchor="page3">
+            <div class="wrap">
             <h2>我的技能</h2>
             <nav>
                 <ol>
-                    <li class="active">
+                    <li class="act active" onclick="openCon(event,'one')">
                         <div class="imageswrap">
                             <img src="img/skill1.png" alt="">
                             <h3>静态页面</h3>
                         </div>
                     </li>
-                    <li >
+                    <li  class="act" onclick="openCon(event,'two')">
                         <div class="imageswrap">
                             <img src="img/skill2.png" alt="">
                             <h3>动态页面</h3>
                         </div>
                     </li>
-                    <li>
+                    <li class="act" onclick="openCon(event,'thre')">
                         <div class="imageswrap">
                             <img src="img/skill3.png" alt="">
                             <h3>移动端页面</h3>
                         </div>
                     </li>
-                    <li>
+                    <li class="act" onclick="openCon(event,'four')">
                         <div class="imageswrap">
                             <img src="img/skill4.png" alt="">
                             <h3>前框框架</h3>
@@ -145,28 +173,39 @@
                     </li>
                 </ol>
                 <ol>
-                    <li class="active" style="display:flex">
+                    <li id="one" class="tabcontent" style="display:flex">
                         <div class="con">
-                            100%还原设计稿，像素级页面制作能力
+                            <h3>
+                               <p>像素级页面制作能力</p>
+                               <p>了解PhotoShop的使用，熟练掌握切图技能</p>
+                               <p>熟悉W3C规范，使用HTML,CSS和jQuery100%还原设计稿</p>
+                            </h3>
                         </div>
                     </li>
-                    <li>
+                    <li id="two" class="tabcontent">
                         <div class="con">
-                            熟悉HTTP、AJAX、JSONP等技术，了解前后端分离开发模式
+                            <h3>
+                               熟悉HTTP、AJAX、JSONP等技术，了解前后端分离开发模式
+                            </h3>
                         </div>
                     </li>
-                    <li>
+                    <li id="thre"  class="tabcontent">
                         <div class="con"> 
-                            熟悉CSS3、响应式页面等
+                            <h3>
+                                熟悉CSS3、响应式页面等
+                            </h3>
                         </div>
                     </li>
-                    <li>
+                    <li id="four" class="tabcontent">
                         <div class="con">
-                            了解Vue.js、React基本原理，能使前端框架开发富交互运用
+                            <h3>
+                                了解Vue.js、React基本原理，能使前端框架开发富交互运用
+                            </h3>
                         </div>
                     </li>
                 </ol>
             </nav>
+            </div>
         </section>
         <section class="contacts section fp-section fp-table" data-anchor="page4">
             <div class="wrap">
@@ -186,6 +225,7 @@
             </div>
         </section>
     </div>
+    <script type="text/javascript"  src="index.js"></script>
     <script type="text/javascript" src="jquery.fullPage.js"></script>
   <script src="http://hm.baidu.com/h.js?988268596e7a833ffbfb2e9f82d93e18"></script>
   <a href="http://www.dowebok.com/77.html" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
