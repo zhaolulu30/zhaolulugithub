@@ -61,10 +61,8 @@ section.summary{
     z-index: 100;
 }
 section.summary .wrap{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
+     /*flex-direction: column;*/
+     position: relative;
      width: 100%;
      height: 100vh;
      perspective: 1000;
@@ -78,6 +76,19 @@ section.summary .wrap{
         max-width: 300px;
     }
 }
+#bg-img{
+    position: absolute;
+    bottom: 0;
+}
+
+#box{
+        width: 100%;
+        height: 100%;
+        margin: 100px auto;
+        border: 1px solid #ddd;
+
+        perspective: 1000px;
+ }
 
 .card {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
@@ -128,11 +139,11 @@ section.summary .wrap{
         }
     }
 .container {
-        left: 30%;
         padding: 300px;
         position: absolute;
         width: 40%;
         left: 50%;
+        bottom: 20%;
         padding: 0 16px;
         background: #fff;
         text-align: center;
@@ -143,11 +154,11 @@ section.summary .wrap{
   clear: both;
   display: table;
 }
-#open{
+/*#open{
     position: absolute;
     right: 10%;
     top:-50%;
-}
+}*/
 .title {
   color: grey;
   font-size: 18px;

@@ -4,8 +4,8 @@
             var mySidenav=document.getElementById("mySidenav");
 
             open.onclick=function(){
-                mySidenav.style.width="250px";
-                document.getElementById("main").style.marginLeft="-250px";
+                mySidenav.style.width="280px";
+                document.getElementById("main").style.marginLeft="-280px";
                 document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             };
 
@@ -35,5 +35,6 @@
             document.getElementById(page).style.display = "flex";
             evt.currentTarget.className += " active";
     }
+    
 
         
