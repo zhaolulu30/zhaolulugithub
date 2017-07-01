@@ -35,6 +35,5 @@
             document.getElementById(page).style.display = "flex";
             evt.currentTarget.className += " active";
     }
-    
 
         
