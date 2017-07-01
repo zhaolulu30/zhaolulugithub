@@ -54,12 +54,6 @@ section.summary{
         background: #fff;
         transition: margin-left .5s;
 }
-#bg-img{
-    position: absolute;
-    left: 15%;
-    max-width: 410px;
-    z-index: 100;
-}
 section.summary .wrap{
      /*flex-direction: column;*/
      position: relative;
@@ -78,7 +72,10 @@ section.summary .wrap{
 }
 #bg-img{
     position: absolute;
+    left: 20%;
+    max-width: 410px;
     bottom: 0;
+    z-index: 1;
 }
 
 #box{
@@ -242,8 +239,8 @@ section.works>ul h3{
     margin: 8px 0;
 }
 section.works>h2{
-    font-size: 36px;
-    margin-bottom: 1em;
+    font-size: 34px;
+    margin:2em auto 1em;
     text-align: center;
 }
 .overlay1{
@@ -270,11 +267,6 @@ section.works>h2{
     transform: translate(-50%,-50%);
 
   }
-  
-
-
-
-
 
 
 
@@ -283,19 +275,19 @@ section.skills{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fafafa;
    
 }
 
-section.skills .wrap{
-     flex-direction: column;
-    background: #fafafa;
-    text-align: center;
-    height: 100vh;
-}
+/*section.skills .wrap{
+    display: inline-block;
+    background: black;
+}*/
 
-section.skills  .wrap > h2{
-    font-size: 36px;
-    margin-bottom: 1em;
+section.skills > h2{
+    font-size: 34px;
+    margin:1.5em auto 1em;
+    text-align: center;
 }
 
 section.skills img{
@@ -344,9 +336,11 @@ section.skills ol:first-child{
     border-bottom: none;
     margin: 0 auto;
     transition: 0.3s;
+    
 }
 
 section.skills ol{
+    box-shadow: 2px 2px 4px #333;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -403,7 +397,7 @@ section.skills ol:nth-child(2)>li{
     align-items: center;
     font-size: 28px;
     color: #333;
-    margin: 5em 0;
+    margin: 5em auto;
     text-align: center;
 }
 
